@@ -1,9 +1,10 @@
 <script>
+    import Footer from "$lib/components/Footer.svelte";
   import { goto } from '$app/navigation';
   export let data;
 
   function navigateToCountry(country) {
-    const encodedCountry = encodeURIComponent(country); // Handle special characters
+    const encodedCountry = encodeURIComponent(country); 
     goto(`/country/${encodedCountry}`);
   }
 </script>
@@ -21,3 +22,6 @@
 {:else}
   <p>Loading or no data available.</p>
 {/if}
+<style>
+
+</style>
